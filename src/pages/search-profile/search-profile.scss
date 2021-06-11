@@ -1,0 +1,34 @@
+page-search-profile {
+    .userImg {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid #a19f9f;
+        margin-top: 40px;
+    }
+    .avatar {
+        text-align: center;
+    }
+    .grid {
+        text-align: center;
+    }
+    .border {
+        border-right: 1px solid #bebebe;
+    }
+    .catalog {
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid #a19f9f;
+        border-bottom: 1px solid #a19f9f;
+        text-align: center;
+    }
+    h5 {
+        padding-top: 10px;
+    }
+    p {
+        color: #c5c5c5;
+    }
+    ion-icon {
+        font-size: 20px;
+    }
+}

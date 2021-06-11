@@ -1,0 +1,90 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+
+        <ion-title>Profile</ion-title>
+        <ion-buttons right>
+            <button ion-button class="text-color" (click)=" OpenOptionPage()"><ion-icon name="more" ></ion-icon></button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <div class="avatar">
+        <img src="{{user.imageUrl}}" class="userImg">
+        <h6> {{user.firstName}} {{user.lastName}}</h6>
+    </div>
+
+
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
+                100k
+                <p>Followers</p>
+
+            </ion-col>
+
+            <ion-col col-6>
+                10
+                <p>Following</p>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div class="catalog">
+        <h5>Timeline</h5>
+    </div>
+
+
+
+    <!--Posts -->
+    <ion-card *ngFor="let post of postRef$ |async" (click)="OpenPostCommentsPage(post.id)">
+
+        <ion-card-content>
+            <p>{{post.caption}}</p>
+
+            <ion-note>
+                {{post.timeStamp}}
+            </ion-note>
+        </ion-card-content>
+
+
+
+        <ion-row>
+            <ion-col> <img src="{{post.image1Url}}"></ion-col>
+            <ion-col> <img src="{{post.image2Url}}"></ion-col>
+        </ion-row>
+
+        <hr>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>  
+            </button>
+
+                <button ion-button icon-left clear small>
+                    <ion-icon name="close-circle"></ion-icon>  
+                  </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+            </button>
+
+                <button ion-button icon-left clear small>
+                    <ion-icon name="close-circle"></ion-icon>  
+                  </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+
+</ion-content>
